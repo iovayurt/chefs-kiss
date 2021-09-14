@@ -1,6 +1,8 @@
 <%= simple_form_for [@chef, @booking] do |f| %>
     <%= f.input :description %>
-    <%= f.association :user %>
+     <%= f.input :start_time %>
+      <%= f.input :end_time %>
+      <%= f.input :total_price %>
     <%= f.submit %>
 <% end %>
 <%= link_to 'BACK', chefs_path, class: 'btn btn-info' %>
