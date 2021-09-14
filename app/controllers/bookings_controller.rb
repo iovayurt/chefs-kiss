@@ -8,6 +8,7 @@ class BookingsController < ApplicationController
     @booking = Booking.new(booking_params)
     @chef = Chef.find(params[:chef_id])
     @booking.chef = @chef
+    @booking.user = current_user
       if @booking.save
         redirect_to chef_path(@chef)
       else
@@ -22,6 +23,6 @@ class BookingsController < ApplicationController
   end
 
   def booking_params
-    params.require(:booking).permit(:description, :chef_id)
+    params.require(:booking).permit(:start_time, :end_time)
   end
 end
