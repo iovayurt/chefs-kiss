@@ -1,15 +1,7 @@
-<%= simple_form_for(@chef) do |f| %>
-    <%= f.input :first_name %>
-    <%= f.submit %>
-<% end %>
+
 <%= link_to 'BACK', chefs_path, class: 'btn btn-info' %>
 5:41
-<h1><%= @chef.name %> </h1>
-<ul>
-    <% @chef.users.each do |user| %>
-        <% booking = Booking.find_by(user: user, chef: @chef) %>
-        <li><%= user.first_name %> | <%= booking.description %> | <%= link_to "X", booking_path(booking), method: :delete %></li>
-    <% end %>
-</ul>
+<h1><%= @chef.first_name %> </h1>
+
 <%= link_to "ADD BOOKING", new_chef_booking_path(@chef) %>
 <%= link_to 'BACK', chefs_path, class: 'btn btn-info' %>
