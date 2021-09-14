@@ -1,6 +1,6 @@
 <h1>Chef's Kiss</h1>
 <ul>
 <% @chefs.each do |chef| %>
-    <li><%= link_to chef.name, chef_path(chef) %> </li>
+    <li><%= link_to chef.first_name, chef_path(chef) %> </li>
 <% end %>
 </ul>
