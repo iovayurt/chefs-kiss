@@ -1,6 +1,36 @@
-<h1>Chef's Kiss</h1>
-<ul>
-<% @chefs.each do |chef| %>
-    <li><%= link_to chef.first_name, chef_path(chef) %> </li>
-<% end %>
-</ul>
+<p id="notice"><%= notice %></p>
+
+<h1>CHEFS KISS</h1>
+<br>
+
+<table>
+  <thead>
+  <h3>CHEFS</h3>
+    <tr>
+      <th>First Name:</th>
+      <th>Last Name:</th>
+      <th>Speciality:</th>
+      <th>Rating:</th>
+      <th>Price per hour:</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @chefs.each do |chef| %>
+      <tr>
+        <td><%= chef.first_name %></td>
+        <td><%= chef.last_name %></td>
+        <td><%= chef.speciality %></td>
+        <td><%= chef.rating %></td>
+        <td><%= chef.price %></td>
+
+        <td><%= link_to 'Show', chef %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Chef', new_chef_path %>
