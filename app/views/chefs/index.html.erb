@@ -1,37 +1,19 @@
-<p id="notice"><%= notice %></p>
-
-<h1>CHEFS KISS</h1>
+<h2>CHEF'S LIST</h2>
 <br>
 
-<table>
-  <thead>
-  <h3>CHEFS</h3>
-    <tr>
-      <th>First Name:</th>
-      <th>Last Name:</th>
-      <th>Speciality:</th>
-      <th>Rating:</th>
-      <th>Price per hour:</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
 
-  <tbody>
-    <% @chefs.each do |chef| %>
-      <tr>
-        <td><%= chef.first_name %></td>
-        <td><%= chef.last_name %></td>
-        <td><%= chef.speciality %></td>
-        <td><%= chef.rating %></td>
-        <td><%= chef.price %></td>
-
-        <td><%= link_to 'Show', chef %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
+<% @chefs.each do |chef| %>
+  <div class="card-product">
+    <img src="https://images.squarespace-cdn.com/content/v1/5c5c3833840b161566b02a76/1573133725500-Y5PCN0V04I86HDAT8AT0/WBC_7095.jpg?format=2500w" />
+    <div class="card-product-infos">
+      <h2><%= chef.first_name %> <%= chef.last_name %></h2>
+      <p><%= chef.rating %></p>
+      <p><%= chef.speciality %></p>
+      <p><%= chef.price %></p>
+      <%= link_to 'Show', chef_path(chef), class: 'btn btn-info'%>
+    </div>
+  </div>
+<% end %>
 
 <%= link_to 'New Chef', new_chef_path, class: 'btn btn-info'%>
 <%= link_to 'Back', root_path, class: 'btn btn-info' %>

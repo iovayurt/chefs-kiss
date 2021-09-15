@@ -1,11 +1,16 @@
-<h3><%= @chef.first_name %> </h3>
-<h3><%= @chef.last_name %> </h3>
-<h3><%= @chef.speciality %> </h3>
-<h3><%= @chef.description %> </h3>
-<h3><%= @chef.rating %> </h3>
-<h3><%= @chef.location %> </h3>
-<h3><%= @chef.price %> </h3>
-
-
+<div class="card-trip">
+  <img src="https://images.squarespace-cdn.com/content/v1/5c5c3833840b161566b02a76/1573133725500-Y5PCN0V04I86HDAT8AT0/WBC_7095.jpg?format=2500w" />
+  <div class="card-trip-infos">
+    <div>
+      <h5>First Name:<%= @chef.first_name %> </h5>
+      <h5>Last Name:<%= @chef.last_name %> </h5>
+      <h5>Speciality:<%= @chef.speciality %> </h5>
+      <h5>Description:<%= @chef.description %> </h5>
+      <h5>Rating:<%= @chef.rating %> </h5>
+      <h5>Location:<%= @chef.location %> </h5>
+    </div>
+    <h2 class="card-trip-pricing"><%= @chef.price %>TL</h2>
+  </div>
+</div>
 <%= link_to "ADD BOOKING", new_chef_booking_path(@chef) , class: 'btn btn-info' %>
 <%= link_to 'BACK', chefs_path, class: 'btn btn-info' %>

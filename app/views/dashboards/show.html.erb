@@ -1,4 +1,18 @@
 <h1>Dashboard</h1>
+<tbody>
+    <% @chefs.each do |chef| %>
+      <tr>
+        <td><%= chef.first_name %></td>
+        <td><%= chef.last_name %></td>
+        <td><%= chef.speciality %></td>
+        <td><%= chef.rating %></td>
+        <td><%= chef.price %></td>
+
+        <td><%= link_to 'Show', chef, class: 'btn btn-info'%></td>
+      </tr>
+    <% end %>
+  </tbody>
+
 <ul class="nav nav-tabs" id="myTab" role="tablist">
   <li class="nav-item" role="presentation">
     <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Chefs</a>
