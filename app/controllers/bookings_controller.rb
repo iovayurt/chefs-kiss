@@ -9,8 +9,9 @@ class BookingsController < ApplicationController
     @chef = Chef.find(params[:chef_id])
     @booking.chef = @chef
     @booking.user = current_user
+
       if @booking.save
-        redirect_to chef_path(@chef)
+        redirect_to chef_path(@chef), notice: 'Booking was successfully created.'
       else
         render :new
       end
