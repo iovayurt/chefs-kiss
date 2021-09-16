@@ -1,16 +1,32 @@
-<div class="card-trip">
-  <img src="https://images.squarespace-cdn.com/content/v1/5c5c3833840b161566b02a76/1573133725500-Y5PCN0V04I86HDAT8AT0/WBC_7095.jpg?format=2500w" />
-  <div class="card-trip-infos">
-    <div>
-      <h5>First Name:<%= @chef.first_name %> </h5>
-      <h5>Last Name:<%= @chef.last_name %> </h5>
-      <h5>Speciality:<%= @chef.speciality %> </h5>
-      <h5>Description:<%= @chef.description %> </h5>
-      <h5>Rating:<%= @chef.rating %> </h5>
-      <h5>Location:<%= @chef.location %> </h5>
+<div class="container_booking">
+    <div class="card-trip">
+      <img src="https://images.squarespace-cdn.com/content/v1/5c5c3833840b161566b02a76/1573133725500-Y5PCN0V04I86HDAT8AT0/WBC_7095.jpg?format=2500w" />
+      <div class="card-trip-infos">
+        <div>
+          <h5>First Name:<%= @chef.first_name %> </h5>
+          <h5>Last Name:<%= @chef.last_name %> </h5>
+          <h5>Speciality:<%= @chef.speciality %> </h5>
+          <h5>Description:<%= @chef.description %> </h5>
+          <h5>Rating:<%= @chef.rating %> </h5>
+          <h5>Location:<%= @chef.location %> </h5>
+        </div>
+        <h2 class="card-trip-pricing"><%= @chef.price %>TL</h2>
+      </div>
     </div>
-    <h2 class="card-trip-pricing"><%= @chef.price %>TL</h2>
-  </div>
+    <div>
+      <div class="col-4">
+            <div id="price-per-night">
+              <h1>
+                <strong><%=@chef.price%>TL</strong>
+              </h1>
+            </div>
+            <p class="booking-info">per day</p>
+      </div>
+      <%= simple_form_for [@chef, @booking] do |f| %>
+        <%= f.input :start_time %>
+        <%= f.input :end_time %>
+
+        <%= f.submit class: "btn" %>
+      <% end %>
+      </div>
 </div>
-<%= link_to "ADD BOOKING", new_chef_booking_path(@chef) , class: 'btn' %>
-<%= link_to 'BACK', chefs_path, class: 'btn' %>
