@@ -12,7 +12,7 @@ class BookingsController < ApplicationController
     @booking.total_price = @booking.calculate_total_price
 
     if @booking.save
-      redirect_to chef_path(@chef), notice: 'Booking was successfully created.'
+      redirect_to dashboard_path(), notice: 'Booking was successfully created.'
     else
       render :new
     end
