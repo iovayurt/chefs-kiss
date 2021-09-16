@@ -1,6 +1,12 @@
 class ChefsController < ApplicationController
   def index
     @chefs = Chef.all
+    @markers = @chefs.geocoded.map do |chef|
+      {
+        lat: chef.latitude,
+        lng: chef.longitude
+      }
+    end
   end
 
   def show
