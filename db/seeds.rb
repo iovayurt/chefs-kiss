@@ -15,21 +15,21 @@ user = User.create(first_name: "Ilyas", last_name: "Ovayurt", location: "Uskudar
 user2 = User.create(first_name: "Begum", last_name: "Ozpeker", location: "Besiktas", password: "password", email: "begum@begum.com")
 user3 = User.create(first_name: "Aziz", last_name: "Alansari", location: "Beyoglu", password: "password", email: "aziz@aziz.com")
 
-chef1 = { user: user, first_name: "Tony", last_name: "Montana", speciality: "Italian food", rating: 5, price: "1200 TL", location: "Istanbul Sisli", description: "Great chef"}
-chef2 = { user: user2, first_name: "Mahmut", last_name: "Usta", speciality: "Turkish food", rating: 4, price: "800 TL", location: "Istanbul Besiktas", description: "Great chef"}
-chef3 = { user: user2, first_name: "Lea", last_name: "Monet", speciality: "French food", rating: 4, price: "800 TL", location: "Istanbul Beyoglu", description: "Great chef"}
-chef4 = { user: user, first_name: "Manon", last_name: "Laurent", speciality: "French food", rating: 5, price: "1200 TL", location: "Istanbul Uskudar", description: "Great chef"}
-chef5 = { user: user, first_name: "Wang", last_name: "Li", speciality: "Chinese food", rating: 3, price: "500 TL", location: "Istanbul Karakoy", description: "Great chef"}
-chef6 = { user: user3, first_name: "Chen", last_name: "Zhao", speciality: "Chinese food", rating: 4, price: "800 TL", location: "Istanbul Fatih", description: "Great chef"}
-chef7 = { user: user, first_name: "Marco", last_name: "Giovanni", speciality: "Italian food", rating: 3, price: "500 TL", location: "Istanbul Sariyer", description: "Great chef"}
-chef8 = { user: user3, first_name: "Somer", last_name: "Sivri", speciality: "Turkish food", rating: 5, price: "1200 TL", location: "Istanbul Kadikoy", description: "Great chef"}
-chef9 = { user: user3, first_name: "Haruto", last_name: "Asahi", speciality: "Japanese food", rating: 5, price: "1200 TL", location: "Istanbul Sisli", description: "Great chef"}
-chef10 = { user: user3, first_name: "Sakura", last_name: "Kaito", speciality: "Japanese food", rating: 5, price: "1200 TL", location: "Istanbul Besiktas", description: "Great chef"}
-chef11 = { user: user3, first_name: "Sarah", last_name: "John", speciality: "Dessert", rating: 4, price: "800 TL", location: "Istanbul Besiktas", description: "Great chef"}
-chef12 = { user: user3, first_name: "Alexander", last_name: "Paul", speciality: "Dessert", rating: 5, price: "1200 TL", location: "Istanbul Sisli", description: "Great chef"}
-chef13 = { user: user3, first_name: "LuLu", last_name: "Aziz", speciality: "Dessert", rating: 5, price: "1200 TL", location: "Istanbul Beyoglu", description: "Great chef"}
-chef14 = { user: user3, first_name: "Kumar", last_name: "Danesh", speciality: "Indian Food", rating: 4, price: "800 TL", location: "Istanbul Sariyer", description: "Great chef"}
-chef15 = { user: user3, first_name: "Moh", last_name: "Adel", speciality: "Arabic Food", rating: 5, price: "1200 TL", location: "Istanbul Karakoy", description: "Great chef"}
+chef1 = { user: user, first_name: "Tony", last_name: "Montana", speciality: "Italian food", rating: 5, price: "1200 TL", location: "Sisli,Istanbul,Turkey", description: "Great chef"}
+chef2 = { user: user2, first_name: "Mahmut", last_name: "Usta", speciality: "Turkish food", rating: 4, price: "800 TL", location: "Besiktas,Istanbul,Turkey", description: "Great chef"}
+chef3 = { user: user2, first_name: "Lea", last_name: "Monet", speciality: "French food", rating: 4, price: "800 TL", location: "Beyoglu,Istanbul,Turkey", description: "Great chef"}
+chef4 = { user: user, first_name: "Manon", last_name: "Laurent", speciality: "French food", rating: 5, price: "1400 TL", location: "Uskudar,Istanbul,Turkey", description: "Great chef"}
+chef5 = { user: user, first_name: "Wang", last_name: "Li", speciality: "Chinese food", rating: 3, price: "500 TL", location: "Karakoy,Istanbul,Turkey ", description: "Great chef"}
+chef6 = { user: user3, first_name: "Chen", last_name: "Zhao", speciality: "Chinese food", rating: 4, price: "800 TL", location: "Fatih,Istanbul,Turkey ", description: "Great chef"}
+chef7 = { user: user, first_name: "Marco", last_name: "Giovanni", speciality: "Italian food", rating: 3, price: "500 TL", location: "Sariyer,Istanbul,Turkey ", description: "Great chef"}
+chef8 = { user: user3, first_name: "Somer", last_name: "Sivri", speciality: "Turkish food", rating: 5, price: "1100 TL", location: "Kadikoy,Istanbul.Turkey ", description: "Great chef"}
+chef9 = { user: user3, first_name: "Haruto", last_name: "Asahi", speciality: "Japanese food", rating: 5, price: "1100 TL", location: "Sisli,Istanbul,Turkey", description: "Great chef"}
+chef10 = { user: user3, first_name: "Sakura", last_name: "Kaito", speciality: "Japanese food", rating: 5, price: "1000 TL", location: "Besiktas,Istanbul,Turkey", description: "Great chef"}
+chef11 = { user: user3, first_name: "Sarah", last_name: "John", speciality: "Dessert", rating: 4, price: "700 TL", location: "Besiktas,Istanbul,Turkey", description: "Great chef"}
+chef12 = { user: user3, first_name: "Alexander", last_name: "Paul", speciality: "Dessert", rating: 5, price: "1200 TL", location: "Sisli,Istanbul,Turkey", description: "Great chef"}
+chef13 = { user: user3, first_name: "LuLu", last_name: "Aziz", speciality: "Dessert", rating: 5, price: "850 TL", location: "Beyoglu,Istanbul,Turkey", description: "Great chef"}
+chef14 = { user: user3, first_name: "Kumar", last_name: "Danesh", speciality: "Indian Food", rating: 4, price: "800 TL", location: "Sariyer,Istanbul,Turkey", description: "Great chef"}
+chef15 = { user: user3, first_name: "Moh", last_name: "Adel", speciality: "Arabic Food", rating: 5, price: "1000 TL", location: "Karakoy,Istanbul,Turkey", description: "Great chef"}
 
 
 
