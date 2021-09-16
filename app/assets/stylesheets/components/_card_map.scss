@@ -1,0 +1,12 @@
+.card-map {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 100%;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: 2fr 2fr;
+  width: 100%;
+  grid-gap: 16px;
+}

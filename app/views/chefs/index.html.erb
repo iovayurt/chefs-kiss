@@ -1,19 +1,24 @@
 <h2>CHEF'S LIST</h2>
 <br>
-
-
-<% @chefs.each do |chef| %>
-  <div class="card-product">
-    <img src="https://images.squarespace-cdn.com/content/v1/5c5c3833840b161566b02a76/1573133725500-Y5PCN0V04I86HDAT8AT0/WBC_7095.jpg?format=2500w" />
-    <div class="card-product-infos">
-      <h2><%= chef.first_name %> <%= chef.last_name %></h2>
-      <p><%= chef.rating %></p>
-      <p><%= chef.speciality %></p>
-      <p><%= chef.price %></p>
-      <%= link_to 'Show', chef_path(chef), class: 'btn btn-info'%>
+<div class="container">
+    <div class="card-map">
+      <div class="cards">
+        <% @chefs.each do |chef| %>
+          <div class="card-product">
+            <img src="https://images.squarespace-cdn.com/content/v1/5c5c3833840b161566b02a76/1573133725500-Y5PCN0V04I86HDAT8AT0/WBC_7095.jpg?format=2500w" />
+            <div class="card-product-infos">
+              <h2><%= chef.first_name %> <%= chef.last_name %></h2>
+              <p>Rating: <%= chef.rating %></p>
+              <p>Speciality: <%= chef.speciality %></p>
+              <p>Price per day: <%= chef.price %>TL</p>
+              <%= link_to 'Show', chef_path(chef), class: 'btn js-scroll-trigger'%>
+            </div>
+          </div>
+        <% end %>
+      </div>
+  # map div is going to come here
     </div>
-  </div>
-<% end %>
+</div>
 
-<%= link_to 'New Chef', new_chef_path, class: 'btn btn-info'%>
-<%= link_to 'Back', root_path, class: 'btn btn-info' %>
+<%= link_to 'New Chef', new_chef_path, class: 'btn js-scroll-trigger'%>
+<%= link_to 'Back', root_path, class: 'btn js-scroll-trigger' %>
