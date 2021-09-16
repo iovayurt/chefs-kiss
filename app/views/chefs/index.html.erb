@@ -1,4 +1,5 @@
-<h2>CHEF'S LIST</h2>
+<h2 class="chef-list">CHEF'S LIST</h2>
+<p class="chef-list"> Choose a chef to view more details for booking</p>
 <br>
 <div class="container">
     <div class="card-map">
@@ -11,7 +12,7 @@
               <p>Rating: <%= chef.rating %></p>
               <p>Speciality: <%= chef.speciality %></p>
               <p>Price per day: <%= chef.price %>TL</p>
-              <%= link_to 'Show', chef_path(chef), class: 'btn js-scroll-trigger'%>
+              <%= link_to 'View', chef_path(chef), class: 'btn js-scroll-trigger'%>
             </div>
           </div>
         <% end %>
@@ -22,10 +23,10 @@
         data-markers="<%= @markers.to_json %>"
         data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"></div>
       </div>
+      <%= link_to 'New Chef', new_chef_path, class: 'btn chef-btn js-scroll-trigger'%>
+      <br>
+      <%= link_to 'Back', root_path, class: 'btn chef-btn js-scroll-trigger' %>
     </div>
 
 
 </div>
-
-<%= link_to 'New Chef', new_chef_path, class: 'btn js-scroll-trigger'%>
-<%= link_to 'Back', root_path, class: 'btn js-scroll-trigger' %>
