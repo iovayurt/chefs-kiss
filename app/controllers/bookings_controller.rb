@@ -9,12 +9,13 @@ class BookingsController < ApplicationController
     @chef = Chef.find(params[:chef_id])
     @booking.chef = @chef
     @booking.user = current_user
+    @booking.total_price = @booking.calculate_total_price
 
-      if @booking.save
-        redirect_to chef_path(@chef), notice: 'Booking was successfully created.'
-      else
-        render :new
-      end
+    if @booking.save
+      redirect_to chef_path(@chef), notice: 'Booking was successfully created.'
+    else
+      render :new
+    end
   end
 
   def destroy
@@ -23,7 +24,8 @@ class BookingsController < ApplicationController
     redirect_to chef_path(@booking.list)
   end
 
+
   def booking_params
-    params.require(:booking).permit(:start_time, :end_time)
+    params.require(:booking).permit(:start_time, :end_time, :total_price)
   end
 end
