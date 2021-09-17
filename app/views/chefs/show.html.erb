@@ -1,33 +1,31 @@
-<div class="container_booking">
-    <div class="card-trip">
-      <img src="https://images.squarespace-cdn.com/content/v1/5c5c3833840b161566b02a76/1573133725500-Y5PCN0V04I86HDAT8AT0/WBC_7095.jpg?format=2500w" />
-      <div class="card-trip-infos">
-        <div>
-          <h5>First Name:<%= @chef.first_name %> </h5>
-          <h5>Last Name:<%= @chef.last_name %> </h5>
-          <h5>Speciality:<%= @chef.speciality %> </h5>
-          <h5>Description:<%= @chef.description %> </h5>
-          <h5>Rating:<%= @chef.rating %> </h5>
-          <h5>Location:<%= @chef.location %> </h5>
-        </div>
-        <h2 class="card-trip-pricing"><%= @chef.price %>TL</h2>
-      </div>
-    </div>
-    <div>
-      <div class="col-4">
-            <div id="price-per-night">
-              <h1>
-                <strong><%=@chef.price%>TL</strong>
-              </h1>
-            </div>
-            <p class="booking-info">per day</p>
-      </div>
-      <%= simple_form_for [@chef, @booking] do |f| %>
-        <%= f.input :start_time %>
-        <%= f.input :end_time %>
+<section class="light">
+	<div class="container py-2">
+		<div class="h1 text-center text-dark" id="pageHeaderTitle"></div>
 
-        <%= f.submit class: "btn" %>
-        <%= link_to 'Back', chefs_path, class: 'btn' %>
-      <% end %>
-      </div>
-</div>
+		<article class="postcard light blue">
+			<a class="postcard__img_link" href="#">
+				<img class="postcard__img" src="https://images.unsplash.com/photo-1572715376701-98568319fd0b?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=668&q=80" alt="Image Title" />
+			</a>
+			<div class="postcard__text t-dark">
+				<h1 class="postcard__title blue"><a href="#"><%= @chef.first_name %> <%= @chef.last_name %></a></h1>
+				<div class="postcard__subtitle small">
+				</div>
+				<div class="postcard__bar"></div>
+				<div class="postcard__preview-txt"><%= @chef.description %> |  |  <%= @chef.speciality %> |  | <%= @chef.location %>
+          <%= simple_form_for [@chef, @booking] do |f| %>
+            <%= f.input :start_time %>
+            <%= f.input :end_time %>
+
+            <%= f.submit class: "btn" %>
+            <%= link_to 'Back', chefs_path, class: 'btn' %>
+          <% end %>
+        </div>
+				<ul class="postcard__tagbox">
+					<li class="tag__item"><i class="fas fa-tag mr-2"></i>Price: <%= @chef.price %> TL</li>
+					<li class="tag__item"><i class="fas fa-clock mr-2"></i>Rating: <%= @chef.rating %></li>
+					<li class="tag__item play blue">
+						<a href="#"><i class="fas fa-play mr-2"></i>View</a>
+					</li>
+				</ul>
+			</div>
+</section>
