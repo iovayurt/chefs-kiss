@@ -18,46 +18,37 @@
     <% @chefs.each do |chef| %><div class="container">
       <div>
         <div class="index-header">
-          <h2><%= chef.first_name %> <%= chef.last_name %></h2>
-          <p>View details of your booking</p>
+          <h5>View details of your booking</h5>
         </div>
         <div class="row booking-row align-items-center">
           <div class="col-2">
             <strong>
-              <p>Name</p>
+              <p>Name: <%= chef.first_name %> <%= chef.last_name %></p>
             </strong>
           </div>
         </div>
           <div class="row booking-row align-items-center">
             <div class="col-2">
               <strong>
-                <p>Start Date</p>
+                <p>Speciality: <%= chef.speciality %></p>
               </strong>
             </div>
           </div>
           <div class="row booking-row align-items-center">
             <div class="col-2">
               <strong>
-                <p>End Date</p>
+                <p>Location: <%= chef.location %></p>
               </strong>
             </div>
           </div>
           <div class="row booking-row align-items-center">
             <div class="col-2">
                 <strong>
-                  <p>Total Amount</p>
-                </strong>
-              </div>
-            </div>
-            <div class="row booking-row align-items-center">
-              <div class="col-2">
-                <strong>
-                  <p>Status</p>
+                  <p>Price: <%= chef.price %>TL</p>
                 </strong>
               </div>
             </div>
           </div>
-        <%= link_to 'Back', chefs_path, class: 'btn' %>
       </div>
 
     <% end %>
@@ -69,47 +60,38 @@
 
       <% @bookings.each do |booking| %>
 
-        <div>
+        <div class="container">
             <div class="index-header">
-              <h2><%= booking.id %></h2>
-              <p>View details of your booking</p>
+              <h5>View details of your booking</h5>
             </div>
             <div class="row booking-row align-items-center">
               <div class="col-2">
                 <strong>
-                  <p><%= booking.chef.first_name %></p>
+                  <h6>Booked Chef: <%= booking.chef.first_name %> <%= booking.chef.last_name %></h6>
                 </strong>
               </div>
             </div>
             <div class="row booking-row align-items-center">
               <div class="col-2">
                 <strong>
-                  <p>Start Date</p>
+                  <p>Start Date: <%= booking.start_time %></p>
                 </strong>
               </div>
             </div>
             <div class="row booking-row align-items-center">
               <div class="col-2">
                 <strong>
-                  <p>End Date</p>
+                  <p>End Date: <%= booking.end_time %></p>
                 </strong>
               </div>
             </div>
             <div class="row booking-row align-items-center">
               <div class="col-2">
                 <strong>
-                  <p>Total Amount</p>
+                  <p>Total Amount: <%= booking.total_price %></p>
                 </strong>
               </div>
             </div>
-            <div class="row booking-row align-items-center">
-              <div class="col-2">
-                <strong>
-                  <p>Status</p>
-                </strong>
-              </div>
-            </div>
-          <%= link_to 'Back', chefs_path, class: 'btn' %>
         </div>
 
 

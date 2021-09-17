@@ -1,11 +1,14 @@
-<%= simple_form_for(@chef) do |f| %>
-    <%= f.input :first_name %>
-    <%= f.input :last_name %>
-    <%= f.input :rating %>
-    <%= f.input :location %>
-    <%= f.input :description %>
-    <%= f.input :speciality %>
-    <%= f.input :price %>
-    <%= f.submit %>
-<% end %>
-<%= link_to 'BACK', chefs_path, class: 'btn' %>
+<div class="container mt-4">
+  <h2 class="mb-4">Create a New Chef</h2>
+  <%= simple_form_for(@chef) do |f| %>
+      <%= f.input :first_name %>
+      <%= f.input :last_name %>
+      <%= f.input :rating %>
+      <%= f.input :location %>
+      <%= f.input :description %>
+      <%= f.input :speciality %>
+      <%= f.input :price %>
+      <%= f.submit class: "btn" %>
+    <% end %>
+    <%= link_to 'BACK', chefs_path, class: 'btn' %>
+</div>
