@@ -1,19 +1,21 @@
-.btn {border-radius: 6px;}
+.btn {
+  border-radius: 6px;
+}
 
-.btn {background-color: #f54c4f;}
+.btn {
+  background-color: #a9a6a6;
+}
 
 .btn:hover {
-  background-color: rgb(164, 158, 158);
+  background-color: rgb(106, 103, 103);
 }
 .chef-btn{
   margin-top: 20px;
 }
-
 .chef-btn.chef{
   margin-left: 50px;
   padding-right: 20px;
 }
-
 .btn.btn-view{
   margin-top: 10px;
 }

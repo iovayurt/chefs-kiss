@@ -10,59 +10,110 @@
 </ul>
 <div class="tab-content" id="myTabContent">
   <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
-    <% @chefs.each do |chef| %>
-      <%= chef.first_name %>
+    <div class="index-header">
+      <h2>My chefs</h2>
+      <p>View details of your booking</p>
+    </div>
+
+    <% @chefs.each do |chef| %><div class="container">
+      <div>
+        <div class="index-header">
+          <h2><%= chef.first_name %> <%= chef.last_name %></h2>
+          <p>View details of your booking</p>
+        </div>
+        <div class="row booking-row align-items-center">
+          <div class="col-2">
+            <strong>
+              <p>Name</p>
+            </strong>
+          </div>
+        </div>
+          <div class="row booking-row align-items-center">
+            <div class="col-2">
+              <strong>
+                <p>Start Date</p>
+              </strong>
+            </div>
+          </div>
+          <div class="row booking-row align-items-center">
+            <div class="col-2">
+              <strong>
+                <p>End Date</p>
+              </strong>
+            </div>
+          </div>
+          <div class="row booking-row align-items-center">
+            <div class="col-2">
+                <strong>
+                  <p>Total Amount</p>
+                </strong>
+              </div>
+            </div>
+            <div class="row booking-row align-items-center">
+              <div class="col-2">
+                <strong>
+                  <p>Status</p>
+                </strong>
+              </div>
+            </div>
+          </div>
+        <%= link_to 'Back', chefs_path, class: 'btn' %>
+      </div>
+
     <% end %>
   </div>
 
   <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
-    <ul>
-    <% @bookings.each do |booking| %>
-      <li><%= booking.start_time %> | <%= booking.end_time %> |<%= booking.total_price %></li>
-    <% end %>
-    </ul>
-  </div>
-</div>
 
-<div class="container">
-  <div class="index-header">
-    <h2>Booked chefs</h2>
-    <p>View details of your booking</p>
+      <div class="index-header"><h2>My Bookings</h2></div>
+
+      <% @bookings.each do |booking| %>
+
+        <div>
+            <div class="index-header">
+              <h2><%= booking.id %></h2>
+              <p>View details of your booking</p>
+            </div>
+            <div class="row booking-row align-items-center">
+              <div class="col-2">
+                <strong>
+                  <p><%= booking.chef.first_name %></p>
+                </strong>
+              </div>
+            </div>
+            <div class="row booking-row align-items-center">
+              <div class="col-2">
+                <strong>
+                  <p>Start Date</p>
+                </strong>
+              </div>
+            </div>
+            <div class="row booking-row align-items-center">
+              <div class="col-2">
+                <strong>
+                  <p>End Date</p>
+                </strong>
+              </div>
+            </div>
+            <div class="row booking-row align-items-center">
+              <div class="col-2">
+                <strong>
+                  <p>Total Amount</p>
+                </strong>
+              </div>
+            </div>
+            <div class="row booking-row align-items-center">
+              <div class="col-2">
+                <strong>
+                  <p>Status</p>
+                </strong>
+              </div>
+            </div>
+          <%= link_to 'Back', chefs_path, class: 'btn' %>
+        </div>
+
+
+      <% end %>
+
   </div>
-  <div class="row booking-row align-items-center">
-    <div class="col-2">
-      <strong>
-        <p>Name</p>
-      </strong>
-    </div>
-  </div>
-    <div class="row booking-row align-items-center">
-    <div class="col-2">
-      <strong>
-        <p>Start Date</p>
-      </strong>
-    </div>
-  </div>
-    <div class="row booking-row align-items-center">
-    <div class="col-2">
-      <strong>
-        <p>End Date</p>
-      </strong>
-    </div>
-  </div>
-    <div class="row booking-row align-items-center">
-    <div class="col-2">
-      <strong>
-        <p>Total Amount</p>
-      </strong>
-    </div>
-  </div>
-    <div class="row booking-row align-items-center">
-    <div class="col-2">
-      <strong>
-        <p>Status</p>
-      </strong>
-    </div>
-  </div>
-  <%= link_to 'Back', chefs_path, class: 'btn' %>
 </div>
