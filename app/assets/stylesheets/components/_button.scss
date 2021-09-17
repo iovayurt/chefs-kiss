@@ -6,6 +6,14 @@
   background-color: rgb(164, 158, 158);
 }
 .chef-btn{
-  justify-content: center;
-  align-items: center;
+  margin-top: 20px;
+}
+
+.chef-btn.chef{
+  margin-left: 50px;
+  padding-right: 20px;
+}
+
+.btn.btn-view{
+  margin-top: 10px;
 }
