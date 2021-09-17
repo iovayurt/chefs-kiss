@@ -12,7 +12,7 @@
               <p>Rating: <%= chef.rating %></p>
               <p>Speciality: <%= chef.speciality %></p>
               <p>Price per day: <%= chef.price %>TL</p>
-              <%= link_to 'View', chef_path(chef), class: 'btn js-scroll-trigger'%>
+              <%= link_to 'View', chef_path(chef), class: 'btn btn-view js-scroll-trigger'%>
             </div>
           </div>
         <% end %>
@@ -22,10 +22,9 @@
         style="width: 100%; height: 600px;"
         data-markers="<%= @markers.to_json %>"
         data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"></div>
+        <%= link_to 'New Chef', new_chef_path, class: 'btn chef-btn chef js-scroll-trigger'%>
+        <%= link_to 'Back', root_path, class: 'btn chef-btn js-scroll-trigger' %>
       </div>
-      <%= link_to 'New Chef', new_chef_path, class: 'btn chef-btn js-scroll-trigger'%>
-      <br>
-      <%= link_to 'Back', root_path, class: 'btn chef-btn js-scroll-trigger' %>
     </div>
 
 
