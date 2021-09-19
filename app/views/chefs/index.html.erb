@@ -1,25 +1,10 @@
 <h2 class="chef-list">CHEF'S LIST</h2>
 <p class="chef-list"> Choose a chef to view more details for booking</p>
 <br>
-<div class="container">
-    <div class="card-map">
-      <div class="cards">
-        <% @chefs.each do |chef| %>
-          <div class="card-product">
-            <img src="https://images.unsplash.com/photo-1551218808-94e220e084d2?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=668&q=80" />
-            <div class="card-product-infos">
-              <h2><%= chef.first_name %> <%= chef.last_name %></h2>
-              <p>Rating: <%= chef.rating %></p>
-              <p>Speciality: <%= chef.speciality %></p>
-              <p>Price per day: <%= chef.price %>TL</p>
-              <%= link_to 'View', chef_path(chef), class: 'btn btn-view js-scroll-trigger'%>
-            </div>
-          </div>
-        <% end %>
-      </div>
+
       <div class="container-map">
         <div id="map"
-          style="width: 100%; height: 600px;"
+          style="width: 100%; height: 250px;"
           data-markers="<%= @markers.to_json %>"
           data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"></div>
           <%= link_to 'New Chef', new_chef_path, class: 'btn chef-btn chef js-scroll-trigger'%>
@@ -27,3 +12,36 @@
         </div>
       </div>
 </div>
+
+<section class="wrapper">
+  <div class="container">
+
+<div class="row"><% @chefs.each do |chef| %>
+ <div class="col-sm-4"><div class="card text-white card-has-bg click-col" style="background-image:url('https://images.unsplash.com/photo-1551218808-94e220e084d2?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=668&q=80');">
+         <img class="card-img d-none" src="https://source.unsplash.com/600x900/?tech,street" alt="Goverment Lorem Ipsum Sit Amet Consectetur dipisi?">
+        <div class="card-img-overlay d-flex flex-column">
+         <div class="card-body">
+
+              <h2><%= chef.first_name %> <%= chef.last_name %></h2> <br>
+              <h6>Rating: <%= chef.rating %></h6><br>
+              <h6>Speciality: <%= chef.speciality %></h6><br>
+              <h6>Price per day: <%= chef.price %>TL</h6><br>
+              <h6>Description: <%= chef.description %></h6><br>
+              <%= link_to 'View', chef_path(chef), class: 'btn btn-view js-scroll-trigger'%>
+
+          </div>
+          <div class="card-footer">
+           <div class="media">
+              <div class="media-body">
+              <h6 class="my-0 text-white d-block"></h6>
+              </div>
+</div>
+          </div>
+        </div>
+      </div></div><% end %>
+
+
+</div>
+
+</div>
+</section>
