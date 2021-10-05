@@ -14,38 +14,30 @@
       <h2>My Chefs</h2>
     </div>
 
-<section class="wrapper"><% @chefs.each do |chef| %>
-  <div class="container">
-
-<div class="row">
-  <div class="col-sm-4"><div class="card text-white card-has-bg click-col" style="background-image:url('https://images.unsplash.com/photo-1615817198611-3a444017a48f?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80');">
-         <img class="card-img d-none" src="https://source.unsplash.com/600x900/?computer,design" alt="Goverment Lorem Ipsum Sit Amet Consectetur dipisi?">
-        <div class="card-img-overlay d-flex flex-column">
-         <div class="card-body">
-            <small class="card-meta mb-2">My Chef</small>
-            <h4 class="card-title mt-0 "><a class="text-white" herf="#">My Chef</a></h4><br>
-            <h6>Name: <%= chef.first_name %> <%= chef.last_name %></h6><br>
-            <h6>Speciality: <%= chef.speciality %></h6><br>
-            <h6>Location: <%= chef.location %></h6><br>
-            <h6>Price: <%= chef.price %>TL</h6>
+    <section class="wrapper">
+    <% @chefs.each do |chef| %>
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-4">
+              <div class="card text-white card-has-bg click-col" style="background-image:url('https://images.unsplash.com/photo-1615817198611-3a444017a48f?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80');">
+                  <img class="card-img d-none" src="https://source.unsplash.com/600x900/?computer,design" alt="Goverment Lorem Ipsum Sit Amet Consectetur dipisi?">
+                  <div class="card-img-overlay d-flex flex-column">
+                    <div class="card-body">
+                      <small class="card-meta mb-2">My Chef</small>
+                      <h4 class="card-title mt-0 "><a class="text-white" herf="#">My Chef</a></h4><br>
+                      <h6>Name: <%= chef.first_name %> <%= chef.last_name %></h6><br>
+                      <h6>Speciality: <%= chef.speciality %></h6><br>
+                      <h6>Location: <%= chef.location %></h6><br>
+                      <h6>Price: <%= chef.price %>TL</h6>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
-          <div class="card-footer">
-           <div class="media">
-  <div class="media-body">
-
-
-  </div>
+      </section>
+  <% end %>
 </div>
-          </div>
-        </div>
-      </div></div>
-
-</div>
-
-</div>
-</section>
-<% end %>
-  </div>
 
   <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
 
@@ -69,14 +61,6 @@
 
 
 
-          </div>
-          <div class="card-footer">
-           <div class="media">
-  <div class="media-body">
-
-
-  </div>
-</div>
           </div>
         </div>
       </div></div>
